@@ -1,4 +1,3 @@
-import React from 'react';
 import './css/App.scss';
 import {
   BrowserRouter as Router,
@@ -12,7 +11,7 @@ import { NotFoundPage } from './pages/Error';
 function App() {
   return (
     <div className="App">
-      <Router basename="/">
+      <Router basename={import.meta.env.BASE_URL}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<NotFoundPage />}></Route>
